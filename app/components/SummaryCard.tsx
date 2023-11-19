@@ -11,7 +11,7 @@ type Props = {
 
 const SummaryCard = ({ title, count, icon }: Props) => {
   return (
-    <Card>
+    <Card variant="outlined">
       <CardContent
         sx={{
           display: "flex",

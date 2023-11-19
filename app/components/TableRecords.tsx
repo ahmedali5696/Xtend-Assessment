@@ -141,13 +141,14 @@ const TableRecords = () => {
 
   return (
     <Box>
-      <Card>
+      <Card variant="outlined">
         <DataGrid
           hideFooter
           rows={records}
           columns={columns}
           sx={{
             height: "70vh",
+            border: 0,
             "& .MuiDataGrid-columnHeaders": {
               borderRadius: 0,
               background: "#e1e1e1",
