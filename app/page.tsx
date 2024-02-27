@@ -25,7 +25,8 @@ const Loading = () => {
 export default function Home() {
   // ** Store
   const { summary } = useAppSelector((store) => store.appData);
-
+  const defaultStoreData = useAppSelector((store) => store.appData);
+  
   // ** Vars
   const defaultStorageData = {
     summary: {
@@ -46,7 +47,7 @@ export default function Home() {
     if (storageData) {
       dispatch(setAppData(JSON.parse(storageData)));
     } else {
-      localStorage.setItem("data", JSON.stringify(defaultStorageData));
+      localStorage.setItem("data", JSON.stringify(defaultStoreData));
     }
   }, []);
 
